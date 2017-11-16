@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #eee;
+    background-image: url(../images/curtis-macnewton-resize.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#welcomeBox {
+    background: rgba(255,255, 255,0.8);
+    position: absolute;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 4rem;
+    width: 450px;
+    height: 350px;
+    padding: 80px 40px;
+    text-align: center;
+    box-shadow: 0 20px 45px -6px black;
+}
+#modalPic {
+    position: absolute;
+    top: calc(-130px/2);
+    left: calc(50% - 50px);
+    width: 100px;
+    height: auto;
+   
+    /*overflow: hidden;*/
+}
+h2 {
+    color: #7e2bb8;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+form {
+    text-align: center;
+}
+#welcomeBox input[type = "text"] {
+    margin: 1.5rem 0;
+    width: 100%;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #aaa;
+    height: 2rem;
+    outline: none;
+    text-align: center;
+}
+::placeholder {
+    color: rgba(255, 0, 0, 0.5);
+    text-align: center;
+}
+/**
+*
+* Place the below code if you wish to iimplement form validation as MNS tutorial
+
+/*#welcomeBox input:focus:invalid {
+   border-bottom: 2px solid red;
+}
+#welcomeBox input:valid {
+   border-bottom: 2px solid green;
+}
+*
+*
+*/
+.weatherSubmit {
+    background: rgba(126, 43, 184, .8);
+    width: 300px;
+    padding: 20px;
+    border: none;
+    margin-bottom: 20px;
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+      outline: none;
+    box-shadow: 0px 15px 10px -10px rgba(0,0,0,0.3);
+    transition: all 200ms cubic-bezier(0.25, 0.39, 0.39, 2.01);
+}
+.weatherSubmit:hover{
+     transform: scale(1.05);
+      box-shadow: 0px 25px 15px -15px rgba(0,0,0,0.3);
+}
+
+
+/*  ****THE CLASSES TO BE ADDED/REMOVED WITH JAVASCRIPT TO CALL ANIMATION****  */
+.js-box-animate {
+    animation: rotate 3s linear;
+}
+.animateBackground {
+    animation-name: animateBackground;
+    animation-duration: 800ms;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal; 
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+.disappear {
+    animation-name: disappear;
+    animation-duration: 900ms;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal; 
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+.appear {
+    animation-name: appear;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal; 
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+/**** NOW BELOW ARE THE ANIMATIONS THAT WILL BE CALLED!  *****/
+
+@keyframes disappear {
+    0% {
+
+    }
+    100% {
+         opacity: 0;
+         display: none;
+    }
+}
+
+@keyframes animateBackground {
+    0% {
+
+    }
+    100% {
+         padding: 20px 40px ;
+         height: 500px;
+        
+    }
+}
+@keyframes appear {
+    0% {
+        opacity: 0;
+        color: red;
+    }
+    100% {
+         opacity: 100%;
+         color: navy;
+        
+    }
+}
+
+
+/*
+@keyframes animateWeather {
+    0% {*/
+        /*transform: rotate(0);*/
+        /*opacity: 1;
+    }*/
+    /*100% {*/
+        /*transform: rotate(360deg);*/
+        /*opacity: 0;
+        display: none; 
+    }
+}*/
+
+
+
+
+
+
+.weatherDetailUl {
+  list-style-type: none;  
+}
